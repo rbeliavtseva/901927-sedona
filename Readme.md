@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Маргарита Белявцева](https://up.htmlacademy.ru/htmlcss/23/user/901927).
-* Наставник: `Неизвестно`.
+* Наставник: [Ксения Григорьева](https://htmlacademy.ru/profile/arctic_pie).
 
 ---
 
