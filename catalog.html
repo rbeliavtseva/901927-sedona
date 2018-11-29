@@ -28,35 +28,21 @@
                 <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                     <fieldset>
                         <legend>Инфраструктура:</legend>
-                        <ul class="filter-options-list">
-                            <li class="filter-option">
-                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-pool" name="pool" checked>
-                                <label for="filter-pool">Бассейн</label>                             
-                            </li>
-                            <li class="filter-option">
-                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-parking" name="parking">
-                                <label for="filter-parking">Парковка</label>
-                            </li>
-                            <li class="filter-option">
-                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-wifi" name="wifi">
-                                <label for="filter-wifi">Wi-Fi</label>
-                            </li>
-                        </ul>
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-pool" name="pool" checked>
+                        <label for="filter-pool">Бассейн</label> 
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-parking" name="parking">
+                        <label for="filter-parking">Парковка</label>
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-wifi" name="wifi">
+                        <label for="filter-wifi">Wi-Fi</label>
                     </fieldset>
                     <fieldset>
                         <legend>Тип жилья:</legend>
-                        <ul class="filter-options-list">
-                            <li class="filter-option">
-                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-hotel" name="hotel" checked>
-                                <label for="filter-hotel">Гостиница</label>
-                            </li>
-                            <li class="filter-option">
-                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-motel" name="motel" checked>
-                                <label for="filter-motel">Мотель</label>
-                            <li class="filter-option">
-                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-apartments" name="apartments" checked>
-                                <label for="filter-apartments">Апартаменты</label> 
-                        </ul>
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-hotel" name="hotel" checked>
+                        <label for="filter-hotel">Гостиница</label>
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-motel" name="motel" checked>
+                        <label for="filter-motel">Мотель</label> 
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="filter-apartments" name="apartments" checked>
+                        <label for="filter-apartments">Апартаменты</label> 
                     </fieldset>
                     <p>Стоимость в сутки (р):</p>
                     <p class="price-range"><span>от 0</span><span> до 3000</span></p>
@@ -79,7 +65,9 @@
                     <li>
                         <a href="#">По рейтингу</a>
                     </li>                  
-                </ul>  
+                </ul>
+                <button class="button sorting-criteria-button" type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировать по возрастанию цены"></button>
+                <button class="button sorting-criteria-button" type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировать по убыванию цены"></button>
             </div>
             
             <section class="catalog">

@@ -35,8 +35,8 @@ a {
 
 .sorting-criteria-list a {
     color: rgba(0, 0, 0, 0.3);
-    font-size: 10.5px;
-    line-height: 17.5;
+    font-size: 10px;
+    line-height: 18x;
     
     border-bottom: 1px dotted #81b3d2;
 }
@@ -121,6 +121,10 @@ a {
     color: rgba(255, 255, 255, 0.3);
     
     background-color: #5496bd;
+}
+
+.sorting-criteria-button {
+    background: none;
 }
 
 .filter-button {
@@ -290,9 +294,6 @@ a {
     border: none;
 }
 
-.filter-options-list {
-    list-style: none;
-}
 
 .filter legend {
     font-size: 16px;
@@ -310,8 +311,8 @@ a {
 }
 
 .extended-sorting span {
-    font-size: 10.5px;
-    line-height: 17.5px;
+    font-size: 10px;
+    line-height: 18px;
 }
 
 .sorting-criteria-list {
