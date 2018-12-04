@@ -401,11 +401,10 @@ a {
 
 .main-header-logo img {
     width: 140px;
-    height: 71px;
+    height: 70px;
     
     position: absolute;
-    left: 529px;
-    right: 531px;
+    left: 530px;
     top: 0;
 }
 
@@ -422,7 +421,8 @@ a {
 .navigation-align {
     width: 478px;
     
-    display: flex;  
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navigation-align li {
@@ -453,7 +453,7 @@ a {
     
     height: 506px;
     
-    margin-bottom: 39px;
+    margin-bottom: 58px;
 }
 
 .about-wrapper {
@@ -462,6 +462,8 @@ a {
     align-items: center;
     
     width: 100%;
+    
+    margin-bottom: 23px;
 }
 
 .background-container img {
@@ -470,16 +472,17 @@ a {
 }
 
 .about {
-    margin-bottom: 33px;
-    
     width: 440px;
     
     font-weight: 700;
+    margin: 0;
 }
 
 .features h2{
     width: 489px;
-    margin-bottom: 43px;   
+    margin-bottom: 50px;
+    
+    font-weight: 700;
 }
 
 .features {
@@ -502,8 +505,8 @@ a {
 .features-item {
     width: 208px;
     
-    padding-bottom: 53px;
-    padding-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 59px;
 }
 
 .features-item-wide.sedona {
@@ -551,7 +554,6 @@ a {
     padding: 0;
     
     width: 1200px;
-/*    outline: 2px solid red;*/
 }
 
 .recommendations-item-text-group {
@@ -559,7 +561,9 @@ a {
     flex-direction: column;
     align-items: center;
     
-    width: 252px; 
+    width: 252px;
+    
+    padding-bottom: 80px;
 }
 
 .recommendations-item {
@@ -575,6 +579,7 @@ a {
     height: 72px;
     
     padding-top: 61px;
+    margin-bottom: 33px;
 }
 
 .search-title {
@@ -586,8 +591,9 @@ a {
 .search-wrapper {
     width: 434px;
     
-    margin-top: 51px;
+    margin-top: 52px;
     margin-bottom: 40px;
+    font-weight: 700;
 }
 
 .toggle-modal-button {
@@ -645,8 +651,8 @@ a {
 }
 
 .filter-title {
-    padding-top: 21px;
-    padding-bottom: 18px;
+    padding-top: 28px;
+    padding-bottom: 25px;
 }
 
 .infrastructure-filters {
@@ -676,8 +682,8 @@ a {
     
     width: 100%;
     
-    margin-bottom: 20px;
-    margin-top: 18px;
+    margin-bottom: 30px;
+    margin-top: 28px;
     margin-left: 72px;
 }
 
@@ -698,8 +704,6 @@ a {
     
     
     width: 200px;
-    
-/*    outline: 2px solid red;*/
 }
 
 .sorting-button-group {
@@ -721,14 +725,16 @@ a {
     width: 100%;
     margin: 0;
     padding: 0;
-    
-/*    outline: 2px solid red;*/
 }
 
 .catalog-item {
     display: flex;
     
     border-top: 1px solid #f2f2f2;
+}
+
+.catalog-item:last-child {
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .title-wrapper {
@@ -763,24 +769,19 @@ a {
     padding-right: 13px;
 }
 
-
 .two-stars {
     width: 41px;
-/*    outline: 2px solid red;*/
 }
 
 .three-stars {
     width: 65px;
-/*    outline: 2px solid red;*/
 }
 
 .four-stars {
     width: 90px;
-/*    outline: 2px solid red;*/
 }
 
 .search-title img {
     width: 1200px;
     height: 593px;
 }
-
