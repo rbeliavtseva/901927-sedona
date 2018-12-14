@@ -44,6 +44,8 @@ img {
 }
 
 .wrapper {
+    position: relative;
+    
     display: flex;
     flex-direction: column;
     width: 1200px;
@@ -121,6 +123,7 @@ main {
     background-color: #81b3d2;
     
     margin: 0 auto;
+    margin-top: 55px;
     padding-left: 196px;
     padding-right: 197px;
     padding-top: 14px;
@@ -215,6 +218,7 @@ a.current{
                     url("../img/background_photo.jpg");
     background-repeat: no-repeat;
     background-position: 0 452px, 0 -83px;
+    background-color: #4B7192;
     
     height: 509px;
     
@@ -485,22 +489,37 @@ a.current{
     z-index: 1; 
     
     max-width: 568px;
-    padding: 55px;   
+    padding: 55px;  
+    
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .search-criteria {
     display: flex;
+    
+    position: relative;
+}
+
+.search-criteria.wide {
     margin-bottom: 30px;
 }
 
+
 .search-criteria label{
+    width: 112px;
     font-size: 14px;
     line-height: 26px;
     
     display: inline-block;
     vertical-align: middle;
     
-    padding-right: 21px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+}
+
+.search-criteria:last-child label {
+    width: 38px;
+    padding-right: 
 }
 
 .search-criteria input {
@@ -534,14 +553,41 @@ a.current{
 }
 
 .criteria-input {
+    width: 346px;
+    padding: 0;
     padding-left: 12px;
-    padding-top: 8px;
     padding-right: 230px;
-    padding-bottom: 7px;
-    position: relative;
 }
 
+.search-criteria svg {
+    width: 21px;
+    height: 22px;
+    
+    position: absolute;
+    right: 9px;
+    top: 25%;
+    
+    fill: #cacaca; 
+}
+
+.search-criteria svg:hover,
+.search-criteria svg:focus{
+    fill: #000000;
+}
+
+.search-criteria svg:active {
+    fill: #81b3d2;
+}
+
+.search-criteria-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .count {
+    position: relative;
+    
     border: none;
     background-color: #f2f2f2;
     
@@ -553,6 +599,32 @@ a.current{
     width: 38px;
     height: 38px;
 }
+
+button.minus::before {
+    content: "";
+    display: block;
+    background-image: url("../img/minus-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 38px 38px;
+    width: 12px;
+    height: 3px;
+    position: absolute;
+    background-color: #aaaaaa;
+    top: 50%;
+    left: 50%;
+}
+
+
+button.minus:hover::before,
+button.minus:focus::before{
+    background-color: #000000;
+}
+
+button.minus:active::before {
+    background-color: #81b3d2;
+}
+
 
 .search-map img {
     position: relative;
@@ -579,10 +651,16 @@ a.current{
 
 .filter {
     display: flex;
+    
+    padding-top: 28px;
+    padding-right: 75px;
+    padding-bottom: 35px;
+    padding-left: 72px;
 } 
 
 .filter fieldset {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     
     width: 139px;
@@ -590,16 +668,18 @@ a.current{
 }
 
 .filter-title {
-    padding-top: 28px;
     padding-bottom: 25px;
 }
 
 .infrastructure-filters {
-    padding-left: 72px;
+    margin: 0;
+    padding: 0;
 }
 
 .type-filters {
-    padding-left: 116px;
+    margin: 0;
+    padding: 0;
+    margin-left: 116px;
 }
 
 .filter-input-checkbox + label {
@@ -608,11 +688,52 @@ a.current{
     position: relative;
 }
 
+.filter-input-checkbox + label:last-of-type {
+    margin-bottom: 0;
+}
+
+.filter-input-checkbox.checked + label::before {
+    content: "";
+    
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    top: 0;
+    left: -40px;
+}
+
+.filter-input-checkbox.checked + label:disabled::before {
+    background-image: url("../img/checkbox-on-disabled.svg");
+}
+
+
+.filter-input-checkbox + label::before {
+    content: "";
+    
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    top: 0;
+    left: -40px;
+}
+
+.filter-input-checkbox + label:disabled:before {
+     background-image: url("../img/checkbox-off.svg");
+}
+
 
 .filter-range {
     margin-left: auto;
-    margin-top: 28px;
-    margin-right: 75px;
 }
 
 .filter-button {
@@ -691,6 +812,29 @@ a.current{
     margin-right: 70px;
 }
 
+.sorting-criteria-button {
+    padding-right: 3px;
+    margin: 0;
+}
+
+.sorting-criteria-button path {
+    fill: #cacaca;
+}
+
+.active path {
+    fill: #81b3d2;
+}
+
+.sorting-criteria-button path:hover,
+.sorting-criteria-button path:focus{
+    fill: #000000;
+}
+
+.sorting-criteria-button path:active {
+    fill: #81b3d2;
+}
+
+
 /*Всё про каталог*/
 .catalog-items-list {
     display: flex;
@@ -708,10 +852,10 @@ a.current{
     
     position: relative;
     
-    padding-top: 25px;
+    padding-top: 30px;
     padding-right: 75px;
     padding-bottom: 30px;
-    padding-left: 75px;
+    padding-left: 72px;
     
     border-top: 1px solid #f2f2f2;
 }
@@ -721,27 +865,32 @@ a.current{
 }
 
 .catalog-item-image{
+    width: 135px;
+    height: 90px;
+    
     margin: 0;
     margin-right: 30px;
     padding: 0;
+    
     order: 0;
 }
 
 .title-wrapper {
+    position: relative;
     order: 2;
-    margin: 0;
     padding: 0;
-    width: 260px;
+    min-width: 260px;
 }
 
 .title-wrapper p {
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .catalog-item-title {
     margin: 0;
     padding: 0;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     
     font-size: 21px;
     line-height: 26px;
@@ -756,7 +905,6 @@ a.current{
     line-height: 21px;
     
     margin: 0;
-    margin-bottom: 15px;
     padding: 0;
     
     color: #333333;
@@ -772,19 +920,27 @@ a.current{
 }
 
 .catalog-item-button {
-    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    
+    position: absolute;
+    bottom: 0;
+    
     margin: 0;
     padding-top: 4px;
     padding-right: 16px;
     padding-bottom: 3px;
     padding-left: 17px;
     
+    text-align: center;
+    
     color: #ffffff;
 }
 
 .button-more {
+    width: 110px;
     left: 0;
-    bottom: 0;
+    
     background-color: #81b3d2;
 }
 
@@ -799,7 +955,8 @@ a.current{
 }
 
 .button-to-book {
-    bottom: 0;
+    width: 142px;
+
     right: 0;
     background-color: #766357;
 }
@@ -816,6 +973,8 @@ a.current{
 
 .catalog-item-rating {
     order: 3;
+    
+    position: relative;
     
     padding: 0;
     margin: 0 auto;
@@ -835,16 +994,22 @@ a.current{
 
 .catalog-item-rating span {
     display: block;
-    position: relative;
+    position: absolute;
+    right: 0;
     bottom: 0;
     
     color: #666666;
     background-color: #f2f2f2;
     
+    text-align: center;
+    
+    min-width: 110px;
+    
+    margin: 0;
     padding-top: 2px;
-    padding-right: 13px;
+    padding-right: 15px;
     padding-bottom: 3px;
-    padding-left: 16px;   
+    padding-left: 15px;   
 }
 
 .two-stars {
@@ -866,26 +1031,35 @@ a.current{
     align-items: center;
     justify-content: space-between;
     
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     
+    padding-top: 36px;
+    padding-right: 100px;
+    padding-bottom: 36px;
+    padding-left: 132px;
+     
     background-color: #ffffff;
     opacity: 0.9;
+}
+
+.main-footer.inner-page {
+    position: static; 
 }
 
 .footer-hashtag {
     font-size: 21px;
     line-height: 21px;
-    
-    padding-top: 51px;
-    padding-left: 132px;
-    padding-bottom: 53px;  
 }
 
 .social-footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     
     width: 150px;
@@ -894,14 +1068,51 @@ a.current{
 }
 
 .social-background {
+    position: relative;
+    
     width: 46px;
     height: 48px;
+    
+    cursor: pointer;
     
     background-color: #81b3d2;
 }
 
+.social-background:hover,
+.social-background:focus {
+    background-color: #669ec0;
+}
+
+.social-background:active {
+    background-color: #5496bd;
+}
+
+.social-background img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-background img:active {
+    opacity: 0.3;
+}
 
 .footer-copyright {
+    display: flex;
     margin: 0;
-    padding-right: 100px;
+}
+
+.footer-copyright span {
+    display: block;
+    
+    padding-top: 10px;
+    margin-right: 8px;
+}
+
+.footer-copyright svg {
+    display: block;
+    
+    width: 115px;
+    height: 41px;
 }
