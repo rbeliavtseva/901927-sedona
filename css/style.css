@@ -106,6 +106,8 @@ main {
 .button {
     font: inherit;
     
+    cursor: pointer;
+    
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
@@ -121,6 +123,9 @@ main {
     line-height: 26px;
     
     background-color: #81b3d2;
+    
+    min-width: 458px;
+    white-space: nowrap;
     
     margin: 0 auto;
     margin-top: 55px;
@@ -455,12 +460,15 @@ a.current{
 .toggle-modal-button {
     position: relative;
     display: block;
+    
     margin: 0 auto;
     width: 100%;
     padding-left: 140px;
     padding-right: 138px;
     padding-top: 30px;
     padding-bottom: 30px;
+    
+    white-space: nowrap;
     
     font-size: 21px;
     line-height: 26px;
@@ -519,7 +527,7 @@ a.current{
 
 .search-criteria:last-child label {
     width: 38px;
-    padding-right: 
+    margin-right: 27px;
 }
 
 .search-criteria input {
@@ -545,9 +553,9 @@ a.current{
     line-height: 26px;
     
     padding-top: 8px;
-    padding-right: 16px;
+    padding-right: 15px;
     padding-bottom: 8px;
-    padding-left: 16px;
+    padding-left: 15px;
     width: 38px;
     height: 38px;
 }
@@ -585,16 +593,18 @@ a.current{
 }
 
 
-.count {
+button.count {
     position: relative;
+    
+    font-size: 0;
     
     border: none;
     background-color: #f2f2f2;
     
-    padding-top: 14px;
+    padding-top: 12px;
     padding-left: 13px;
     padding-bottom: 13px;
-    padding-right: 14px;
+    padding-right: 12px;
     
     width: 38px;
     height: 38px;
@@ -603,26 +613,49 @@ a.current{
 button.minus::before {
     content: "";
     display: block;
-    background-image: url("../img/minus-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 38px 38px;
-    width: 12px;
+    
+    width: 11px;
     height: 3px;
+    position: absolute;
+    background-color: #aaaaaa;
+}
+
+button.minus:hover::before,
+button.minus:focus::before,
+button.plus:hover::before,
+button.plus:hover::after,
+button.plus:focus::before,
+button.plus:focus::after {
+    background-color: #000000;
+}
+
+button.minus:active::before,
+button.plus:active::before,
+button.plus:active::after {
+    background-color: #81b3d2;
+}
+
+button.plus::before {
+    content: "";
+    display: block;
+    
+    width: 11px;
+    height: 3px;
+    position: absolute;
+    background-color: #aaaaaa;
+}
+
+button.plus::after {
+    content: "";
+    display: block;
+    
+    width: 3px;
+    height: 12px;
     position: absolute;
     background-color: #aaaaaa;
     top: 50%;
     left: 50%;
-}
-
-
-button.minus:hover::before,
-button.minus:focus::before{
-    background-color: #000000;
-}
-
-button.minus:active::before {
-    background-color: #81b3d2;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -654,7 +687,7 @@ button.minus:active::before {
     
     padding-top: 28px;
     padding-right: 75px;
-    padding-bottom: 35px;
+    padding-bottom: 28px;
     padding-left: 72px;
 } 
 
@@ -683,34 +716,15 @@ button.minus:active::before {
 }
 
 .filter-input-checkbox + label {
+    min-height: 23px;
     margin-bottom: 23px;
-    margin-left: 40px;
+    padding-left: 40px;
     position: relative;
 }
 
 .filter-input-checkbox + label:last-of-type {
     margin-bottom: 0;
 }
-
-.filter-input-checkbox.checked + label::before {
-    content: "";
-    
-    position: absolute;
-    width: 27px;
-    height: 23px;
-    
-    background-image: url("../img/checkbox-on.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    
-    top: 0;
-    left: -40px;
-}
-
-.filter-input-checkbox.checked + label:disabled::before {
-    background-image: url("../img/checkbox-on-disabled.svg");
-}
-
 
 .filter-input-checkbox + label::before {
     content: "";
@@ -722,36 +736,157 @@ button.minus:active::before {
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    
-    top: 0;
-    left: -40px;
+    left: 0;
 }
 
-.filter-input-checkbox + label:disabled:before {
-     background-image: url("../img/checkbox-off.svg");
+.filter-input-checkbox:checked + label::before {
+    background-image: url("../img/checkbox-on.svg");
 }
 
+.filter-input-checkbox:disabled + label::before {
+     background-image: url("../img/checkbox-off-disabled.svg");
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+    background-image: url("../img/checkbox-on-disabled.svg");
+}
 
 .filter-range {
+    width: 314px;
     margin-left: auto;
 }
 
-.filter-button {
-  display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+.filter-range-title {
+    margin-bottom: 9px;
 
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
-
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
 }
 
+.price-controls {
+    position: relative;
+    
+    height: 36px;
+    margin-bottom: 20px;
+    
+    font-size: 0;
+
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+
+    width: 2px;
+    height: 22px;
+
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+
+}
+
+.price-controls label {
+    display: inline-block;
+
+    font-size: 14px;
+    line-height: 32px;
+    vertical-align: top;
+
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    box-sizing: content-box;
+    width: 90px;
+    padding-left: 65px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    
+    color: inherit;
+    font: inherit;
+
+    background: none;
+    border: none;
+}
+
+.range-controls {
+    position: relative;
+
+    margin-bottom: 32px;
+}
+
+.range-controls .scale {
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+
+    box-sizing: content-box;
+    width: 4px;
+    height: 4px;
+
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover,
+.range-toggle:focus{
+    background: #1c4f80;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+
+.filter-button {
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    color: #000000;
+    background: #ffffff;
+}
 
 /*Всё про extended sorting*/
 .extended-sorting {
@@ -849,8 +984,7 @@ button.minus:active::before {
 
 .catalog-item {
     display: flex;
-    
-    position: relative;
+    height: 150px;
     
     padding-top: 30px;
     padding-right: 75px;
@@ -876,7 +1010,7 @@ button.minus:active::before {
 }
 
 .title-wrapper {
-    position: relative;
+    font-size: 0;
     order: 2;
     padding: 0;
     min-width: 260px;
@@ -884,11 +1018,12 @@ button.minus:active::before {
 
 .title-wrapper p {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .catalog-item-title {
     margin: 0;
+    margin-top: -5px;
     padding: 0;
     margin-bottom: 10px;
     
@@ -923,9 +1058,11 @@ button.minus:active::before {
     display: inline-block;
     vertical-align: middle;
     
-    position: absolute;
-    bottom: 0;
+    white-space: nowrap;
     
+    font-size: 14px;
+    line-height: 21px;
+
     margin: 0;
     padding-top: 4px;
     padding-right: 16px;
@@ -938,8 +1075,9 @@ button.minus:active::before {
 }
 
 .button-more {
-    width: 110px;
-    left: 0;
+    min-width: 110px;
+    
+    margin-right: 6px;
     
     background-color: #81b3d2;
 }
@@ -955,9 +1093,8 @@ button.minus:active::before {
 }
 
 .button-to-book {
-    width: 142px;
+    min-width: 142px;
 
-    right: 0;
     background-color: #766357;
 }
 
@@ -974,8 +1111,6 @@ button.minus:active::before {
 .catalog-item-rating {
     order: 3;
     
-    position: relative;
-    
     padding: 0;
     margin: 0 auto;
     margin-right: 0;   
@@ -989,14 +1124,11 @@ button.minus:active::before {
     
     margin: 0 auto;
     margin-right: 0;
-    margin-bottom: 45px;
+    margin-bottom: 47px;
 }
 
 .catalog-item-rating span {
     display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
     
     color: #666666;
     background-color: #f2f2f2;
@@ -1004,8 +1136,9 @@ button.minus:active::before {
     text-align: center;
     
     min-width: 110px;
+    white-space: nowrap;
     
-    margin: 0;
+    margin: 0 auto;
     padding-top: 2px;
     padding-right: 15px;
     padding-bottom: 3px;
@@ -1026,15 +1159,11 @@ button.minus:active::before {
 
 /*Всё про футер*/
 
+
 .main-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
     
     padding-top: 36px;
     padding-right: 100px;
@@ -1045,8 +1174,12 @@ button.minus:active::before {
     opacity: 0.9;
 }
 
-.main-footer.inner-page {
-    position: static; 
+
+.main-footer.main {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;  
 }
 
 .footer-hashtag {

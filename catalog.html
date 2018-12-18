@@ -35,7 +35,7 @@
                     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                         <fieldset class="infrastructure-filters">
                             <legend class="filter-title">Инфраструктура:</legend>
-                            <input class="visually-hidden filter-input-checkbox checked" type="checkbox" id="filter-pool" name="pool" checked>
+                            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-pool" name="pool" checked>
                             <label for="filter-pool">Бассейн</label> 
                             <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-parking" name="parking">
                             <label for="filter-parking">Парковка</label>
@@ -44,18 +44,18 @@
                         </fieldset>
                         <fieldset class="type-filters">
                             <legend class="filter-title">Тип жилья:</legend>
-                            <input class="visually-hidden filter-input-checkbox checked" type="checkbox" id="filter-hotel" name="hotel" checked>
+                            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-hotel" name="hotel" checked>
                             <label for="filter-hotel">Гостиница</label>
-                            <input class="visually-hidden filter-input-checkbox checked" type="checkbox" id="filter-motel" name="motel" checked>
+                            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-motel" name="motel" checked>
                             <label for="filter-motel">Мотель</label> 
-                            <input class="visually-hidden filter-input-checkbox checked" type="checkbox" id="filter-apartments" name="apartments" checked>
+                            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-apartments" name="apartments" checked>
                             <label for="filter-apartments">Апартаменты</label> 
                         </fieldset>
                         <div class="filter-range">
                             <div class="filter-range-title">Стоимость в сутки (р):</div>
                             <div class="price-controls">
-                                <label for="min-price">от <input type="text" id="min-price" name="min-price" value="0"></label>
-                                <label for="max-price">до <input type="text" id="max-price" name="max-price" value="3000"></label>
+                                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
                             </div>
                             <div class="range-controls">
                                 <div class="scale">
