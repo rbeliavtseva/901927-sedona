@@ -560,6 +560,13 @@ a.current{
     height: 38px;
 }
 
+.criteria-input-number:focus {
+    padding-top: 8px;
+    padding-right: 13px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+}
+
 .criteria-input {
     width: 346px;
     padding: 0;
@@ -643,6 +650,10 @@ button.plus::before {
     height: 3px;
     position: absolute;
     background-color: #aaaaaa;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 button.plus::after {
@@ -653,6 +664,7 @@ button.plus::after {
     height: 12px;
     position: absolute;
     background-color: #aaaaaa;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
