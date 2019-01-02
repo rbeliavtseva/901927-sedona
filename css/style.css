@@ -138,20 +138,30 @@ main {
     
     color: #000000;
     display: block;
+}
+
+.site-navigation li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
     
-    padding-top: 13px;
-    padding-right: 68px;
-    padding-bottom: 18px;
-    padding-left: 72px;
     min-width: 239px;
 }
 
-.site-navigation li:nth-of-type(4n-2) {
-    margin-right: 240px;
+.site-navigation li:nth-child(-n+2) {
+    padding-left: 73px;
+    
+    text-align: left;
 }
 
-.site-navigation li:last-of-type {
-    margin-right: auto;
+.site-navigation li:nth-child(n+3) {
+    padding-right: 73px;
+    
+    text-align: right;
+}
+
+.site-navigation li:nth-child(2) {
+    margin-right: 240px;
 }
 
 .site-navigation a:hover,
@@ -582,14 +592,23 @@ a.current {
     padding-right: 230px;
 }
 
-.search-criteria svg {
+.wide button {
+    position: absolute;
+    
+    border: none;
+    background: transparent;
+    
     width: 21px;
     height: 22px;
     
-    position: absolute;
-    right: 9px;
-    top: 25%;
+    margin: 0;
+    padding: 0;
     
+    top: 25%;
+    right: 9px;
+}
+
+.search-criteria svg {
     fill: #cacaca; 
 }
 
@@ -715,26 +734,11 @@ button.plus::after {
 
 .modal-show {
     display: block;
-    z-index: -5;
     
-    -webkit-animation: slide 0.6s;
-            animation: slide 0.6s;
-    -webkit-transition-timing-function: ease-in-out;
-         -o-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
+    overflow: hidden;
 }
 
- @keyframes slide {
-     0% {
-         -webkit-transform: translateY(-395px);
-                 transform: translateY(-395px);
-    }
-     
-    100% {
-        -webkit-transform: translateY(0px);
-                transform: translateY(0px);
-    }
-}
+
 
 @keyframes shake {
     0%,
@@ -797,14 +801,10 @@ button.plus::after {
     font-weight: 700;
 }
 
-
 .filter {
     display: flex;
     
-    padding-top: 26px;
-    padding-right: 75px;
-    padding-bottom: 30px;
-    padding-left: 72px;
+    padding: 29px 72px;
 } 
 
 .filter fieldset {
@@ -829,6 +829,10 @@ button.plus::after {
     margin: 0;
     padding: 0;
     margin-left: 116px;
+}
+
+.filter-input-checkbox {
+    display: none;
 }
 
 .filter-input-checkbox + label {
@@ -868,7 +872,7 @@ button.plus::after {
 }
 
 .filter-range {
-    width: 314px;
+    width: 318px;
     margin-left: auto;
 }
 
@@ -926,7 +930,7 @@ button.plus::after {
 }
 
 .price-controls .max-price {
-    padding-left: 55px;
+    padding-left: 57px;
 }
 
 .price-controls input {
@@ -943,7 +947,7 @@ button.plus::after {
 .range-controls {
     position: relative;
 
-    margin-bottom: 32px;
+    margin-bottom: 31px;
 }
 
 .range-controls .scale {
@@ -989,10 +993,14 @@ button.plus::after {
 
 .filter-button {
     display: block;
-    margin: 0 auto;
-    padding: 6px 35px;
     
-    min-width: 133px;
+    margin: 0 auto;
+    margin-right: 96px;
+    padding: 6px 30px;
+    
+    min-width: 137px;
+    
+    text-align: center;
 
     font-size: 14px;
     line-height: 21px;
@@ -1089,12 +1097,12 @@ button.plus::after {
     fill: #81b3d2;
 }
 
-.sorting-criteria-button path:hover,
-.sorting-criteria-button path:focus{
+.sorting-criteria-button:hover path,
+.sorting-criteria-button:focus path {
     fill: #000000;
 }
 
-.sorting-criteria-button path:active {
+.sorting-criteria-button:active path {
     fill: #81b3d2;
 }
 
@@ -1113,7 +1121,8 @@ button.plus::after {
 
 .catalog-item {
     display: flex;
-    height: 150px;
+    
+    min-height: 150px;
     
     padding-top: 30px;
     padding-right: 75px;
@@ -1127,8 +1136,8 @@ button.plus::after {
     border-bottom: 1px solid #f2f2f2;
 }
 
-.catalog-item-image{
-    width: 135px;
+.catalog-item-image {
+    min-width: 135px;
     height: 90px;
     
     margin: 0;
@@ -1175,7 +1184,8 @@ button.plus::after {
 }
 
 .catalog-item-category {
-    margin-right: 20px;
+    min-width: 110px;
+    margin-right: 6px;
 }
 
 .catalog-item-button {
@@ -1189,6 +1199,7 @@ button.plus::after {
     font-weight: bold;
 
     margin: 0;
+    margin-right: 6px;
     padding-top: 3px;
     padding-right: 16px;
     padding-bottom: 4px;
@@ -1201,8 +1212,6 @@ button.plus::after {
 
 .button-more {
     min-width: 110px;
-    
-    margin-right: 6px;
     
     background-color: #81b3d2;
 }
@@ -1236,7 +1245,7 @@ button.plus::after {
 .catalog-item-rating {
     order: 3;
     
-    width: 110px;
+    min-width: 110px;
     
     padding: 0;
     margin: 0 auto;
@@ -1308,7 +1317,7 @@ button.plus::after {
     right: 0;
     left: 0;  
     
-    z-index: 100;
+    z-index: 2;
 }
 
 .footer-hashtag {
@@ -1332,23 +1341,19 @@ button.plus::after {
 }
 
 .social-button {
-    position: relative;
     background-color: #81b3d2;
     
     cursor: pointer;
     
     margin-right: 6px;
-    
-    width: 46px;
-    height: 48px;
 }
 
 .social-button:last-of-type {
     margin: 0;
 }
 
-.social-button:hover,
-.social-button:focus {
+.social-button a:hover,
+.social-button a:focus {
     background-color: #669ec0;
 }
 
@@ -1356,41 +1361,29 @@ button.plus::after {
     background-color: #5496bd;
 }
 
-.social-button a::before {
-   position: absolute;
-    content: "";
+.social-button a {
+    display: block;
     
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-   
+    width: 46px;
+    height: 48px;
+    
     background-repeat: no-repeat;
+    background-position: center;
 }
 
-.social-button a:active::before {
+.social-button a:active {
     opacity: 0.3;
 }
 
-.twitter-button a::before {
-    width: 17px;
-    height: 15px;
-    
+.twitter-button a {
     background-image: url("../img/twitter.svg"); 
 }
 
-.facebook-button a::before {
-    width: 12px;
-    height: 22px;
-    
+.facebook-button a {
     background-image: url("../img/fb-icon.svg");
 }
 
-.youtube-button a::before {
-    width: 20px;
-    height: 16px;
-    
+.youtube-button a {
     background-image: url("../img/youtube.svg");
 }
 
@@ -1415,11 +1408,11 @@ button.plus::after {
     height: 41px;
 }
 
-.logo path:hover,
-.logo path:focus {
+.logo:hover path,
+.logo:focus path {
     fill: #81b3d2;
 }
 
-.logo path:active {
+.logo:active path {
     fill: #bdbbbc;
 }
