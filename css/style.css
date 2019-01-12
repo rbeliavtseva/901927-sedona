@@ -1,3 +1,4 @@
+
 html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 *, *::before, *::after { -webkit-box-sizing: inherit; box-sizing: inherit; }
 
@@ -14,7 +15,6 @@ body {
     
     background-color: #f2f2f2;
 }
-
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -47,8 +47,6 @@ img {
 .wrapper {
     position: relative;
     
-    display: flex;
-    flex-direction: column;
     width: 1200px;
     
     background-color: #ffffff;
@@ -121,7 +119,6 @@ main {
 .sorting-criteria-button {
     background: none;
 }
-
 
 .main-navigation {
     display: flex;
@@ -230,13 +227,20 @@ a.current {
 }
 
 .about {
-    min-width: 440px;
     margin: 0;
+    padding: 0 379px 0 380px;
     
     font-weight: 700;
     font-size: 21px;
     line-height: 26px; 
     text-align: center;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .about {
+        box-sizing: content-box;
+        width: 441px; 
+    }
 }
 
 .features h2 {
@@ -261,7 +265,6 @@ a.current {
     list-style: none;
 }
 
-
 .features-item.item-wide {
     display: flex;
     
@@ -275,7 +278,7 @@ a.current {
     line-height: 21px;
     color: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 0 95px;
     
     text-align: center;
 }
@@ -305,7 +308,7 @@ a.current {
 
 .sedona img {
     position: absolute;
-    top: -78px;
+    top: 0;
     left: 400px;
     
     background-color: #8A8C7D;
@@ -314,7 +317,7 @@ a.current {
 .canyon img {
     position: absolute;
     left: 0;
-    top: -76px;
+    top: 0;
     
     background-color: #D09780;
 }
@@ -336,7 +339,6 @@ a.current {
     margin-left: auto;
 }
 
-
 .recommendations-list {
     display: flex;
     flex-wrap: wrap;
@@ -356,11 +358,11 @@ a.current {
     align-items: center;
     padding-top: 60px;
     padding-bottom: 82px;
-    
+
     width: 400px;
 }
 
-.recommendations-item:last-of-type {
+.recommendations-item:last-child {
     margin-right: auto;
 }
 
@@ -388,7 +390,13 @@ a.current {
 .recommendations-item p {
     text-align: center;
     margin: 0;
-    padding: 0 50px; 
+    padding: 0 50px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .recommendations-item p {
+        width: 400px;
+    }
 }
 
 .features-items-wrapper {
@@ -423,6 +431,7 @@ a.current {
     text-align: center;
     margin: 0;
     padding: 0;
+    padding: 0 120px;
 }
 
 .features-items-wrapper p {
@@ -476,13 +485,11 @@ a.current {
     
     margin: 0 auto;
     width: 100%;
-    padding-left: 140px;
-    padding-right: 138px;
+    padding-left: 138px;
+    padding-right: 139px;
     padding-top: 29px;
     padding-bottom: 31px;
-    
-    white-space: nowrap;
-    
+
     font-size: 21px;
     line-height: 26px;
     
@@ -565,7 +572,6 @@ a.current {
 .modal-error {
     animation: shake 0.6s;
 }
-
 
 .search-criteria {
     display: flex;
@@ -666,16 +672,16 @@ a.current {
     right: 9px;
 }
 
-.criteria-input + button path {
+.date-input-button path {
     fill: #a9a9a9; 
 }
 
-.criteria-input + button:hover path,
-.criteria-input + button:focus path {
+.date-input-button:hover path,
+.date-input-button:focus path {
     fill: #000000;
 }
 
-.criteria-input + button:active path {
+.date-input-button:active path {
     fill: #81b3d2;
 }
 
@@ -805,7 +811,10 @@ button.plus::after {
     background-color: #aaaaaa;
 }
 
-/*Всё про фильтр каталога*/
+.search-map iframe {
+    z-index: 1;
+    position: absolute;
+}
 
 .filters {
     color: #ffffff;
@@ -1236,7 +1245,7 @@ button.plus::after {
     margin-right: 6px;
     padding-top: 3px;
     padding-right: 16px;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     padding-left: 17px;
     
     text-align: center;
@@ -1288,13 +1297,18 @@ button.plus::after {
 
 .rating {
     height: 17px;
+    display: flex;
+    justify-content: flex-end;
     
-    background-image: url("../img/star.svg");
-    background-repeat: space no-repeat;
-    
-    margin: 0 auto;
-    margin-right: 0;
     margin-bottom: 47px;
+}
+
+.rating img {
+    margin-right: 6px;
+}
+
+.rating img:last-child {
+    margin-right: 0;
 }
 
 .catalog-item-rating span {
@@ -1314,21 +1328,6 @@ button.plus::after {
     padding-bottom: 3px;
     padding-left: 16px;   
 }
-
-.two-stars {
-    width: 41px;
-}
-
-.three-stars {
-    width: 65px;
-}
-
-.four-stars {
-    width: 85px;
-}
-
-/*Всё про футер*/
-
 
 .main-footer {
     display: flex;

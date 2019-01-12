@@ -23,21 +23,3 @@ form.addEventListener("submit", function (evt) {
         modal.classList.add("modal-error");
     } 
 });
-
-function initMap() {
-    var position = {lat: 34.874486, lng: -111.759711};
-    var options = {
-        center: position,
-        zoom: 9,
-        mapTypeId: 'roadmap',
-        disableDefaultUI: true
-    };
-    
-    var map = new google.maps.Map(document.getElementById('map'), options);
-                
-    var marker = new google.maps.Marker({
-        map: map,
-        position: position,
-        title: 'Седона'
-    });              
-}
