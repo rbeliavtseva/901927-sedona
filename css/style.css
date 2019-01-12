@@ -814,6 +814,8 @@ button.plus::after {
 .search-map iframe {
     z-index: 1;
     position: absolute;
+    
+    border: none;
 }
 
 .filters {
