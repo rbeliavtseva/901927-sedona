@@ -5,14 +5,14 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 body {
     margin: 0;
     padding: 0;
-    
+
     font-family: "PT Sans", Arial, sans-serif;
     color: #000000;
     font-size: 14px;
     font-weight: normal;
     line-height: 21px;
     text-transform: uppercase;
-    
+
     background-color: #f2f2f2;
 }
 
@@ -26,9 +26,9 @@ input[type="radio"].visually-hidden {
     margin: -1px;
     border: 0;
     padding: 0;
-  
+
     white-space: nowrap;
-    
+
     -webkit-clip-path: inset(100%);
             clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -46,14 +46,16 @@ img {
 
 .wrapper {
     position: relative;
-    
+    display: flex;
+    flex-direction: column;
+
     width: 1200px;
-    
+
     background-color: #ffffff;
-    
+
     margin: 0 auto;
     min-height: 100vh;
-    
+
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
@@ -65,15 +67,15 @@ main {
     color: rgba(0, 0, 0, 0.3);
     font-size: 10px;
     line-height: 18px;
-    
+
     border-bottom: 1px dotted #81b3d2;
 }
 
 .sorting-criteria-list a:hover,
 .sorting-criteria-list a:focus{
     color: #81b3d2;
-    
-    border-bottom: 1px dotted #81b3d2;   
+
+    border-bottom: 1px dotted #81b3d2;
 }
 
 .sorting-criteria-list a:active {
@@ -104,15 +106,15 @@ main {
 
 .button {
     font: inherit;
-    
+
     cursor: pointer;
-    
+
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
-    
+
     text-align: center;
-    
+
     border: none;
 }
 
@@ -123,16 +125,16 @@ main {
 .main-navigation {
     display: flex;
     flex-wrap: wrap;
-    
+
     position: relative;
-    
+
     background-color: #ffffff;
 }
 
 .site-navigation a {
     font-weight: bold;
     line-height: 26px;
-    
+
     color: #000000;
     display: block;
 }
@@ -141,19 +143,19 @@ main {
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 0;
-    
+
     min-width: 239px;
 }
 
 .site-navigation li:nth-child(-n+2) {
     padding-left: 73px;
-    
+
     text-align: left;
 }
 
 .site-navigation li:nth-child(n+3) {
     padding-right: 73px;
-    
+
     text-align: right;
 }
 
@@ -177,7 +179,7 @@ a.current {
 .main-header-logo {
     width: 140px;
     height: 70px;
-    
+
     position: absolute;
     left: 530px;
     top: 0;
@@ -187,26 +189,26 @@ a.current {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+
     margin: 0;
     padding: 0;
-    
+
     width: 100%;
-    
+
     list-style: none;
 }
 
 .background-container {
     display: flex;
-    
+
     background-image: url("../img/intro-mask.svg"),
                     url("../img/background_photo.jpg");
     background-repeat: no-repeat;
     background-position: 0 452px, 0 -83px;
     background-color: #4B7192;
-    
+
     height: 509px;
-    
+
     margin-bottom: 58px;
 }
 
@@ -214,9 +216,9 @@ a.current {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     width: 100%;
-    
+
     margin-bottom: 29px;
 }
 
@@ -229,29 +231,29 @@ a.current {
 .about {
     margin: 0;
     padding: 0 379px 0 380px;
-    
+
     font-weight: 700;
     font-size: 21px;
-    line-height: 26px; 
+    line-height: 26px;
     text-align: center;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .about {
         box-sizing: content-box;
-        width: 441px; 
+        width: 441px;
     }
 }
 
 .features h2 {
     font-weight: normal;
-    
+
     font-size: 14px;
     line-height: 26px;
     color: #333333;
-    
+
     text-align: center;
-    
+
     min-width: 490px;
     margin: 0 auto;
     padding: 0;
@@ -261,13 +263,13 @@ a.current {
 .features-list {
     margin: 0;
     padding: 0;
-    
+
     list-style: none;
 }
 
 .features-item.item-wide {
     display: flex;
-    
+
     width: 100%;
     background-color: #81b3d2;
     padding: 0;
@@ -279,7 +281,7 @@ a.current {
     color: #ffffff;
     margin: 0;
     padding: 0 95px;
-    
+
     text-align: center;
 }
 
@@ -287,9 +289,9 @@ a.current {
     margin: 0;
     padding: 0;
     color: #ffffff;
-    
+
     padding: 0 48px;
-    
+
     text-align: center;
 }
 
@@ -297,8 +299,8 @@ a.current {
     text-align: center;
     margin-top: 25px;
     margin-bottom: 20px;
-    
-    display: block;    
+
+    display: block;
 }
 
 .item-wide {
@@ -310,7 +312,7 @@ a.current {
     position: absolute;
     top: 0;
     left: 400px;
-    
+
     background-color: #8A8C7D;
 }
 
@@ -318,14 +320,14 @@ a.current {
     position: absolute;
     left: 0;
     top: 0;
-    
+
     background-color: #D09780;
 }
 
 .features-text-group {
     padding: 0;
     text-align: center;
-    
+
     width: 400px;
     padding-top: 46px;
     padding-bottom: 60px;
@@ -343,12 +345,12 @@ a.current {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     margin: 0;
     padding: 0;
-    
+
     width: 1200px;
-    
+
     list-style: none;
 }
 
@@ -368,10 +370,10 @@ a.current {
 
 .recommendations-item img {
     order: -1;
-    
+
     width: 75px;
     height: 72px;
-    
+
     padding: 0;
     margin-bottom: 29px;
 }
@@ -383,7 +385,7 @@ a.current {
     margin: 0;
     padding: 0;
     margin-bottom: 23px;
-    
+
     text-align: center;
 }
 
@@ -402,14 +404,14 @@ a.current {
 .features-items-wrapper {
     display: flex;
     flex-wrap: wrap;
-    
+
     justify-content: space-between;
-    
+
     background-color: #eeeeee;
     margin-bottom: 50px;
-    
+
     list-style: none;
-    
+
     margin: 0;
     padding: 0;
 }
@@ -417,9 +419,9 @@ a.current {
 .features-item {
     padding-top: 47px;
     padding-bottom: 60px;
-    
+
     width: 400px;
-    
+
     background-color: #eeeeee;
 }
 
@@ -438,12 +440,12 @@ a.current {
     color: #333333;
     margin: 0;
     padding: 0 60px;
-    
-    text-align: center; 
+
+    text-align: center;
 }
 
 .features-item:last-of-type {
-   margin-right: auto; 
+   margin-right: auto;
 }
 
 .container-align {
@@ -457,32 +459,32 @@ a.current {
 .search-title b {
     font-size: 30px;
     line-height: 36px;
-    
+
     margin: 0;
     padding: 0;
     margin-bottom: 23px;
-    
+
     text-align: center;
-    
+
     display: block;
 }
 
 .search-title p {
     line-height: 24px;
-    
+
     margin: 0;
     margin-bottom: 48px;
     padding: 0;
-    
+
     text-align: center;
-    
+
     color: #333333;
 }
 
 .toggle-modal-button {
     position: relative;
     display: block;
-    
+
     margin: 0 auto;
     width: 100%;
     padding-left: 138px;
@@ -492,9 +494,9 @@ a.current {
 
     font-size: 21px;
     line-height: 26px;
-    
+
     background-color: #766357;
-    
+
     text-align: center;
 }
 
@@ -505,43 +507,43 @@ a.current {
 
 .toggle-modal-button:active {
     color: rgba(255, 255, 255, 0.3);
-    
+
     background-color: #503e33;
 }
 
 .search-modal {
     position: absolute;
-    
+
     flex-wrap: wrap;
     background-color: #ffffff;
-    
-    z-index: 1; 
-    
+
+    z-index: 1;
+
     overflow-y: hidden;
-    
+
     -webkit-transition-property: all;
          -o-transition-property: all;
             transition-property: all;
-    
+
     -webkit-transition-duration: .5s;
 	     -o-transition-duration: .5s;
 	        transition-duration: .5s;
-    
+
     -webkit-transition-timing-function: ease;
 	     -o-transition-timing-function: ease;
 	        transition-timing-function: ease;
-    
+
     max-height: 0;
     max-width: 568px;
-    padding: 0 55px;   
-    
+    padding: 0 55px;
+
     -webkit-box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
             box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .modal-show {
     padding: 55px;
-    max-height: 600px; 
+    max-height: 600px;
 }
 
 @keyframes shake {
@@ -575,11 +577,11 @@ a.current {
 
 .search-criteria {
     display: flex;
-    
+
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
-    
+
     position: relative;
 }
 
@@ -591,10 +593,10 @@ a.current {
     width: 112px;
     font-size: 14px;
     line-height: 26px;
-    
+
     display: inline-block;
     vertical-align: middle;
-    
+
     padding-top: 5px;
     padding-bottom: 7px;
 }
@@ -608,10 +610,10 @@ a.current {
     font: inherit;
     text-transform: uppercase;
     line-height: 26px;
-    
+
     padding-top: 5px;
     padding-bottom: 7px;
-    
+
     border: none;
     background-color: #f2f2f2;
 }
@@ -631,10 +633,10 @@ a.current {
 .criteria-input-number {
     font-size: 14px;
     line-height: 26px;
-    
+
     font-size: 14px;
     line-height: 26px;
-    
+
     padding-bottom: 4px;
     padding-right: 13px;
     padding-left: 15px;
@@ -658,22 +660,22 @@ a.current {
 
 .wide button {
     position: absolute;
-    
+
     border: none;
     background: transparent;
-    
+
     width: 21px;
     height: 22px;
-    
+
     margin: 0;
     padding: 0;
-    
+
     top: 8px;
     right: 9px;
 }
 
 .date-input-button path {
-    fill: #a9a9a9; 
+    fill: #a9a9a9;
 }
 
 .date-input-button:hover path,
@@ -692,17 +694,17 @@ a.current {
 
 button.count {
     position: relative;
-    
+
     font-size: 0;
-    
+
     border: none;
     background-color: #f2f2f2;
-    
+
     padding-top: 12px;
     padding-left: 13px;
     padding-bottom: 13px;
     padding-right: 12px;
-    
+
     width: 38px;
     height: 38px;
 }
@@ -710,12 +712,12 @@ button.count {
 button.minus::before {
     content: "";
     display: block;
-    
+
     width: 11px;
     height: 3px;
     position: absolute;
     background-color: #aaaaaa;
-    
+
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -741,12 +743,12 @@ button.plus:active::after {
 button.plus::before {
     content: "";
     display: block;
-    
+
     width: 11px;
     height: 3px;
     position: absolute;
     background-color: #aaaaaa;
-    
+
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -757,12 +759,12 @@ button.plus::before {
 button.plus::after {
     content: "";
     display: block;
-    
+
     width: 3px;
     height: 12px;
     position: absolute;
     background-color: #aaaaaa;
-    
+
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -773,19 +775,19 @@ button.plus::after {
 .search-button {
     font-size: 21px;
     line-height: 26px;
-    
+
     background-color: #81b3d2;
-    
+
     min-width: 458px;
     white-space: nowrap;
-    
+
     margin: 0 auto;
     margin-top: 54px;
     padding-left: 196px;
     padding-right: 197px;
     padding-top: 14px;
     padding-bottom: 18px;
-    
+
     text-align: center;
 }
 
@@ -796,13 +798,13 @@ button.plus::after {
 
 .search-button:active {
     color: rgba(255, 255, 255, 0.3);
-    
+
     background-color: #5496bd;
 }
 
 .search-map {
     position: relative;
-    
+
     width: 1200px;
     height: 594px;
 }
@@ -814,13 +816,13 @@ button.plus::after {
 .search-map iframe {
     z-index: 1;
     position: absolute;
-    
+
     border: none;
 }
 
 .filters {
     color: #ffffff;
-    
+
     background-color: #81b3d2;
     background-image: url("../img/filter-background.jpg");
     background-position: 0 -300px;
@@ -835,18 +837,18 @@ button.plus::after {
 
 .filter {
     display: flex;
-    
-    padding-top: 26px; 
+
+    padding-top: 26px;
     padding-right: 72px;
     padding-bottom: 30px;
     padding-left: 72px;
-} 
+}
 
 .filter fieldset {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+
     width: 139px;
     border: none;
 }
@@ -872,12 +874,12 @@ button.plus::after {
 
 .filter-input-checkbox + label {
     min-height: 23px;
-    
+
     margin-bottom: 23px;
     padding-left: 40px;
-    
+
     position: relative;
-    
+
     float: left;
     user-select: none;
 }
@@ -888,11 +890,11 @@ button.plus::after {
 
 .filter-input-checkbox + label::before {
     content: "";
-    
+
     position: absolute;
     width: 27px;
     height: 23px;
-    
+
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -926,10 +928,10 @@ button.plus::after {
 
 .price-controls {
     position: relative;
-    
+
     height: 36px;
     margin-bottom: 20px;
-    
+
     font-size: 0;
 
     border: 2px solid #ffffff;
@@ -959,7 +961,7 @@ button.plus::after {
     font-size: 14px;
     line-height: 21px;
     vertical-align: center;
-    
+
     padding-top: 5px;
 
     cursor: pointer;
@@ -978,11 +980,11 @@ button.plus::after {
 .price-controls input {
     font-size: 14px;
     line-height: 21px;
-    
+
     width: 50px;
     margin: 0;
     padding: 0;
-    
+
     color: inherit;
     font: inherit;
 
@@ -1039,13 +1041,13 @@ button.plus::after {
 
 .filter-button {
     display: block;
-    
+
     margin: 0 auto;
     margin-right: 96px;
     padding: 6px 30px;
-    
+
     min-width: 137px;
-    
+
     text-align: center;
 
     font-size: 14px;
@@ -1069,9 +1071,9 @@ button.plus::after {
 .extended-sorting {
     display: flex;
     align-items: center;
-    
+
     width: 100%;
-    
+
     padding-bottom: 31px;
     padding-top: 29px;
     padding-left: 72px;
@@ -1085,17 +1087,17 @@ button.plus::after {
 .sorting-criteria-list {
     display: flex;
     flex-wrap: wrap;
-    
+
     margin: 0;
     padding: 0;
-    
+
     list-style: none;
 }
 
 .sorting-criteria-list a {
     display: block;
     margin-right: 31px;
-    
+
     font-size: 12px;
     line-height: 18px;
 }
@@ -1105,27 +1107,27 @@ button.plus::after {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    
-    margin-right: 49px; 
+
+    margin-right: 49px;
 }
 
 .extended-sorting .sorting-heading {
     display: block;
     font-size: 12px;
     line-height: 18px;
-    
+
     margin-right: 40px;
 }
 
 .sorting-button-group {
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-right: 73px;
 }
 
 .sorting-criteria-button {
     display: inline-block;
     vertical-align: top;
-    
+
     padding: 0;
     margin: 0;
     margin-right: 8px;
@@ -1156,24 +1158,24 @@ button.plus::after {
 .catalog-items-list {
     display: flex;
     flex-direction: column;
-    
+
     width: 100%;
     margin: 0;
     padding: 0;
-    
+
     list-style: none;
 }
 
 .catalog-item {
     display: flex;
-    
+
     min-height: 150px;
-    
+
     padding-top: 30px;
     padding-right: 72px;
     padding-bottom: 30px;
     padding-left: 72px;
-    
+
     border-top: 1px solid #f2f2f2;
 }
 
@@ -1184,11 +1186,11 @@ button.plus::after {
 .catalog-item-image {
     min-width: 135px;
     height: 90px;
-    
+
     margin: 0;
     margin-right: 30px;
     padding: 0;
-    
+
     order: 0;
 }
 
@@ -1208,23 +1210,23 @@ button.plus::after {
     margin-top: -5px;
     padding: 0;
     margin-bottom: 7px;
-    
+
     font-size: 21px;
     line-height: 26px;
 }
 
-.catalog-item-category, 
+.catalog-item-category,
 .catalog-item-price{
     display: inline-block;
     vertical-align: middle;
-    
+
     font-size: 14px;
     line-height: 21px;
-    
+
     margin: 0;
     margin-bottom: 14px;
     padding: 0;
-    
+
     color: #333333;
 }
 
@@ -1236,9 +1238,9 @@ button.plus::after {
 .catalog-item-button {
     display: inline-block;
     vertical-align: middle;
-    
+
     white-space: nowrap;
-    
+
     font-size: 14px;
     line-height: 21px;
     font-weight: bold;
@@ -1249,15 +1251,15 @@ button.plus::after {
     padding-right: 16px;
     padding-bottom: 3px;
     padding-left: 17px;
-    
+
     text-align: center;
-    
+
     color: #ffffff;
 }
 
 .button-more {
     min-width: 110px;
-    
+
     background-color: #81b3d2;
 }
 
@@ -1289,19 +1291,19 @@ button.plus::after {
 
 .catalog-item-rating {
     order: 3;
-    
+
     min-width: 110px;
-    
+
     padding: 0;
     margin: 0 auto;
-    margin-right: 0;   
+    margin-right: 0;
 }
 
 .rating {
     height: 17px;
     display: flex;
     justify-content: flex-end;
-    
+
     margin-bottom: 47px;
 }
 
@@ -1315,32 +1317,32 @@ button.plus::after {
 
 .catalog-item-rating span {
     display: block;
-    
+
     color: #666666;
     background-color: #f2f2f2;
-    
+
     text-align: center;
-    
+
     min-width: 110px;
     white-space: nowrap;
-    
+
     margin: 0 auto;
     padding-top: 2px;
     padding-right: 13px;
     padding-bottom: 3px;
-    padding-left: 16px;   
+    padding-left: 16px;
 }
 
 .main-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     padding-top: 36px;
     padding-right: 100px;
     padding-bottom: 36px;
     padding-left: 132px;
-     
+
     background-color: #ffffff;
     opacity: 0.9;
 }
@@ -1350,18 +1352,18 @@ button.plus::after {
     position: absolute;
     bottom: 0;
     right: 0;
-    left: 0;  
-    
+    left: 0;
+
     z-index: 2;
 }
 
 .footer-hashtag {
     display: block;
-    
+
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
-    
+
     padding-right: 27px;
     padding-bottom: 4px;
 }
@@ -1369,18 +1371,18 @@ button.plus::after {
 .social-footer {
     display: flex;
     flex-wrap: wrap;
-    
+
     margin: 0;
     padding: 0;
-    
+
     list-style: none;
 }
 
 .social-button {
     background-color: #81b3d2;
-    
+
     cursor: pointer;
-    
+
     margin-right: 6px;
 }
 
@@ -1399,10 +1401,10 @@ button.plus::after {
 
 .social-button a {
     display: block;
-    
+
     width: 46px;
     height: 48px;
-    
+
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1412,7 +1414,7 @@ button.plus::after {
 }
 
 .twitter-button a {
-    background-image: url("../img/twitter.svg"); 
+    background-image: url("../img/twitter.svg");
 }
 
 .facebook-button a {
@@ -1430,16 +1432,16 @@ button.plus::after {
 
 .footer-copyright span {
     display: block;
-    
+
     padding-top: 6px;
     margin-right: 8px;
-    
+
     line-height: 26px;
 }
 
 .footer-copyright svg {
     display: block;
-    
+
     width: 115px;
     height: 41px;
 }
